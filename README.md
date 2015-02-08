@@ -12,13 +12,12 @@ Here's the example file from this repository
       
       
       print vlookup.vlookup(lookup_value,'example.csv',2)
-      print vlookup.list_vlookup(lookup_list,'example.csv',3)
+      print vlookup.vlookup(lookup_list,'example.csv',3)
       
-There are currently two seperate funtions: vlookup, and list lookup.
 
-vlookup takes a string as the first argument, and list_lookup takes a list (surpised?). They both then take a csv file from the same directory as the table array, and then a column index number to lookup on.
+vlookup takes either a string or a list as the first argument. It then takes a csv file from the same directory as the table array, and then a column index number to lookup on.
 
-The major difference is that the csv file is opened once each function call so the list_lookup is much more efficient for looking up many things. Keep in mind the csv is opened EVERY time the either funtion is called which could get a bit slow if used in a loop.
+The csv file is opened once each function call so the list lookup is much more efficient for looking up many things. Keep in mind the csv is opened EVERY time the funtion is called which could make things a bit slow if used in a loop.
 
 It works by creating a list of lists from the csv where each row is it's own list. It then creates a dictionary with the first list item as the key, and the value based on the column index input. Finally, it returns the value as a list or string.
 
