@@ -28,3 +28,6 @@ def vlookup(lookup_value,lookup_csv,col_index_num):
         return looked_up_list
     else:
         return lookup_dict[lookup_value]
+        
+def faster_vlookup(lookup_value,lookup_dict):
+    return lookup_dict[lookup_value]
