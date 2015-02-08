@@ -21,4 +21,6 @@ The csv file is opened once each function call so the list lookup is much more e
 
 It works by creating a list of lists from the csv where each row is it's own list. It then creates a dictionary with the first list item as the key, and the value based on the column index input. Finally, it returns the value as a list or string.
 
+faster_vlookup allows you to call each function individually. You can use the two helper functions to create your array and dictionary, and the call faster_vlookup which is a much quicker dictionary search. 
+
 
