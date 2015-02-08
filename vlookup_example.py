@@ -5,4 +5,4 @@ lookup_list = ['bed-and-bath/accessories','bed-and-bath/storage-and-hampers/stor
 
 
 print vlookup.vlookup(lookup_value,'example.csv',2)
-print vlookup.list_vlookup(lookup_list,'example.csv',3)
+print vlookup.vlookup(lookup_list,'example.csv',3)
