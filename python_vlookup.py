@@ -1,33 +1,32 @@
 import csv
 
-def create_lookup_array(lookup_csv):
-    with open(lookup_csv, 'rb') as csvfile:
-        lookup_array = []
-        lookup_reader = csv.reader(csvfile, delimiter=',', quotechar='|')
-        for lookup_entry in lookup_reader:
-            lookup_array.append(lookup_entry)
-        return lookup_array
+#Returns a list of lists, where each row is a sublist
+def get_csv_data(csv_file_path):
+    with open(csv_file_path, 'r') as csvfile:
+        csv_rows = list(csv.reader(csvfile, delimiter=',', quotechar='|'))
+    return csv_rows
 
-def create_lookup_dict(lookup_array,lookup_index):
-    lookup_dict = {}
-    for lookup_entry in lookup_array:
-        lookup_dict[lookup_entry[0]] = lookup_entry[int(lookup_index)]
-    return lookup_dict
+##Creates a dictionary with the first list item as the key,
+##and the value based on the column index input
+def create_column_dict(csv_rows, index):
+    column_dict = {row[0]: row[index] for row in csv_rows}
+    return column_dict
 
-def vlookup(lookup_value,lookup_csv,col_index_num):
-    lookup_array = create_lookup_array(lookup_csv)
-    lookup_dict = create_lookup_dict(lookup_array,col_index_num-1)
+#Returns the Looked up value as a list or string
+def vlookup(item,csv_file_path,col_index_num):
+    csv_rows = get_csv_data(csv_file_path)
+    column_dict = create_column_dict(csv_rows,col_index_num-1)
 
-    if isinstance(lookup_value, list):
+    if isinstance(item, list):
+        return [column_dict[key] for key in item]
 
-        lookup_value_list = lookup_value
-        looked_up_list = []
+    return column_dict[item]
 
-        for lookup_value in lookup_value_list:
-            looked_up_list.append(lookup_dict[lookup_value])
-        return looked_up_list
-    else:
-        return lookup_dict[lookup_value]
-        
-def faster_vlookup(lookup_value,lookup_dict):
-    return lookup_dict[lookup_value]
+# faster_vlookup allows you to call each function individually.
+# You can use the two helper functions to create your array and dictionary only once,
+# and then call faster_vlookup which is a much quicker
+# Useful for using in loops.
+def faster_vlookup(item,column_dict):
+    if isinstance(item, list):
+        return [column_dict[key] for key in item]
+    return column_dict[item]
