@@ -5,14 +5,14 @@ Doesn't get any simpler than this. Pretty much an exact replica of VLOOKUP in Ex
 
 Here's the example file from this repository
 
-      import vlookup
+      import python_vlookup
       
       lookup_value = 'outdoor/accessories'
       lookup_list = ['bed-and-bath/accessories','bed-and-bath/storage-and-hampers/storage','decor-and-pillows/rugs/hide']
       
       
-      print vlookup.vlookup(lookup_value,'example.csv',2)
-      print vlookup.vlookup(lookup_list,'example.csv',3)
+      print python_vlookup.vlookup(lookup_value,'example.csv',2)
+      print python_vlookup.vlookup(lookup_list,'example.csv',3)
       
 
 vlookup takes either a string or a list as the first argument. It then takes a csv file from the same directory as the table array, and then a column index number to lookup on.
