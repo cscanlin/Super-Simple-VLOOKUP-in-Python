@@ -9,7 +9,7 @@ Install with pip
 
 Here's the example file from this repository
 
-      import python_vlookup
+      from python_vlookup import python_vlookup
       
       lookup_value = 'outdoor/accessories'
       lookup_list = ['bed-and-bath/accessories','bed-and-bath/storage-and-hampers/storage','decor-and-pillows/rugs/hide']
