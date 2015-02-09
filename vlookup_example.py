@@ -1,4 +1,4 @@
-import python_vlookup
+from python_vlookup import python_vlookup
 
 ###for faster_vlookup
 csv_rows = python_vlookup.get_csv_data('example.csv')
