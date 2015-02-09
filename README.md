@@ -3,6 +3,10 @@
 
 Doesn't get any simpler than this. Pretty much an exact replica of VLOOKUP in Excel, except no fuzzy matching (...yet). I needed this for a project and was surprised I couldn't find any other prebuilt way to do it. I decided to loosely package it up so other can use it, but it's not very sophisticated so I would be careful installing it in any mission critical infrastructure.
 
+Install with pip
+
+      pip install python_vlookup
+
 Here's the example file from this repository
 
       import python_vlookup
