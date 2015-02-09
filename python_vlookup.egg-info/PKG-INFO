@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: python-vlookup
+Version: 1.0
+Summary: A replica of VLOOKUP from Microsoft Excel, for Python
+Home-page: https://github.com/cscanlin/Super-Simple-VLOOKUP-in-Python
+Author: Christopher Scanlin
+Author-email: cscanlin@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/cscanlin/Super-Simple-VLOOKUP-in-Python/tarball/1.0
+Description: UNKNOWN
+Keywords: python,excel,vlookup,string,search
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
