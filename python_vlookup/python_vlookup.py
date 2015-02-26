@@ -28,5 +28,5 @@ def vlookup(item,csv_file_path,col_index_num):
 # Useful for using in loops.
 def faster_vlookup(item,column_dict):
     if isinstance(item, list):
-        return [column_dict[key] for key in item]
-    return column_dict[item]
+        return [column_dict[str(key)] for key in item]
+    return column_dict[str(item)]
