@@ -18,9 +18,9 @@ def vlookup(item,csv_file_path,col_index_num):
     column_dict = create_column_dict(csv_rows,col_index_num-1)
 
     if isinstance(item, list):
-        return [column_dict[key] for key in item]
+        return [column_dict[str(key)] for key in item]
 
-    return column_dict[item]
+    return column_dict[str(item)]
 
 # faster_vlookup allows you to call each function individually.
 # You can use the two helper functions to create your array and dictionary only once,
