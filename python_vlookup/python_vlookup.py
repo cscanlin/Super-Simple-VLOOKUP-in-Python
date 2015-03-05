@@ -2,7 +2,7 @@ import csv
 
 # Returns a list of lists, where each row is a sublist
 def get_csv_data(csv_file_path):
-    with open(csv_file_path, 'r') as csvfile:
+    with open(csv_file_path, 'rU') as csvfile:
         csv_rows = list(csv.reader(csvfile, delimiter=',', quotechar='|'))
     return csv_rows
 
