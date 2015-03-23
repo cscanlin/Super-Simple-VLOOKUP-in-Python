@@ -33,7 +33,7 @@ setup(
     author = 'Christopher Scanlin',
     author_email = 'cscanlin@gmail.com',
     url = 'https://github.com/cscanlin/Super-Simple-VLOOKUP-in-Python',
-    download_url = 'https://github.com/cscanlin/Super-Simple-VLOOKUP-in-Python/tarball/1.1',
+    download_url = 'https://github.com/cscanlin/Super-Simple-VLOOKUP-in-Python/tarball/1.2',
     keywords = ['python', 'excel', 'vlookup', 'string', 'search'],
     package_data={'python_vlookup': data_files},
     include_package_data=True,
