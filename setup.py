@@ -28,7 +28,7 @@ for dirpath, dirnames, filenames in os.walk('python_vlookup'):
 setup(
     name = 'python_vlookup',
     packages = ['python_vlookup'],
-    version = '1.1',
+    version = '1.2',
     description = 'A replica of VLOOKUP from Microsoft Excel, for Python',
     author = 'Christopher Scanlin',
     author_email = 'cscanlin@gmail.com',
