@@ -21,7 +21,7 @@ Here's the example file from this repository
 
 vlookup takes either a string or a list as the first argument. It then takes a csv file from the same directory as the table array, and then a column index number to lookup on.
 
-The csv file is opened once each function call so the list lookup is much more efficient for looking up many things. Keep in mind the csv is opened EVERY time the funtion is called which could make things a bit slow if used in a loop.
+The csv file is opened once each function call so the list lookup is much more efficient for looking up many things. Keep in mind the csv is opened EVERY time the function is called which could make things a bit slow if used in a loop.
 
 It works by creating a list of lists from the csv where each row is it's own list. It then creates a dictionary with the first list item as the key, and the value based on the column index input. Finally, it returns the value as a list or string.
 
